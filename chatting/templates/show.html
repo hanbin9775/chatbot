@@ -1,0 +1,25 @@
+{% load staticfiles %}
+<!-- "이곳에 글들이 나올 예정" -->
+<!doctype HTML>
+<html>
+  <head>
+    <link rel="stylesheet" href="{% static 'style.css' %}" type="text/css">
+    <!-- <meta http-equiv="refresh" content="2"> -->
+  </head>
+  <body>
+  <style>
+      @import url('https://fonts.googleapis.com/css?family=Josefin+Sans|Noto+Sans+KR&display=swap');
+      
+      .chats{
+      }
+  </style>
+    <!-- <h3 style="color:white;">{{chats.count}}명</h3> -->
+    
+    {% for x in chats.all %}
+    <div class="chats">
+        <p>{{x.chat}}</p>
+    </div>
+    {% endfor %}
+
+  </body>
+</html>

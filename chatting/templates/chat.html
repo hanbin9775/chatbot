@@ -1,0 +1,51 @@
+{% load staticfiles %}
+
+<!doctype html>
+
+<html>
+  <head>
+    <link rel="stylesheet" href="{% static 'style.css' %}" type="text/css">
+  </head>
+  <body>
+  <style>
+      @import url('https://fonts.googleapis.com/css?family=Josefin+Sans|Noto+Sans+KR&display=swap');
+
+
+      .typing{
+        padding:2em;
+        border-radius: 2em;
+        margin:auto;
+        display:block;
+        color:white;
+        resize: vertical;
+        width:70%
+      }
+      .typing::placeholder{
+        color:black;
+      }
+      .button{
+        border:0;
+        border-radius:1em;
+        margin:auto;
+        display:block;
+        padding:1em;
+      }
+
+      .button :hover {
+        color: black;
+      }
+
+
+  </style>
+    <!-- <p>"이곳에 타자를 칠 예정"</p> -->
+    </div>
+        <form action="{% url 'create' %}">
+            <h4>CHATTING ZONE</h4>
+            </br>
+            <textarea class="typing" name="chat" id="" cols="30" rows="10" placeholder="100자 이내로 축하메세지를 남겨주세요~"></textarea>
+        </br>
+            <input type="submit" value="글 남기기" class="button">
+        </form>  
+    </div>
+  </body>
+</html>
